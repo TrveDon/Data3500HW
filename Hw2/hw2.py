@@ -55,3 +55,10 @@ else: print ('No')
 #
 #2.8
 #
+print('Number\tSquare\tCube')
+print("0\t0\t0")
+print("1\t1\t1")
+print('2\t4\t8')
+print('3\t9\t27')
+print('4\t16\t64')
+print('5\t25\t125')
