@@ -12,3 +12,9 @@ age = int(input('Enter your age'))
 lspan = 78.39
 live = lspan - age
 print (f"you are {age} Years old, you have {live} years left")
+
+#Activity 3
+grade = int(input('Enter your Grade: '))
+if grade >= 93:
+    print("Congrats you got an A!")
+else: print("you still learned a ton!")
