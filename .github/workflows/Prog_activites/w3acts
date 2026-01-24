@@ -1,0 +1,14 @@
+#Activity 1
+apple_price = 2
+Number_purchased = 10
+tax = 1.07
+total_bill = apple_price * Number_purchased * tax
+if total_bill == 0:
+    print ('Check User inputs')
+else: print('You Purchased ', Number_purchased,' Apples. the bill is: ', total_bill)
+
+#Activity 2
+age = int(input('Enter your age'))
+lspan = 78.39
+live = lspan - age
+print (f"you are {age} Years old, you have {live} years left")
