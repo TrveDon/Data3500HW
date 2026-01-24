@@ -8,7 +8,7 @@ if total_bill == 0:
 else: print('You Purchased ', Number_purchased,' Apples. the bill is: ', total_bill)
 
 #Activity 2
-age = int(input('Enter your age'))
+age = int(input('Enter your age: '))
 lspan = 78.39
 live = lspan - age
 print (f"you are {age} Years old, you have {live} years left")
