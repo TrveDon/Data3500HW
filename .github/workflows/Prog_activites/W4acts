@@ -13,3 +13,13 @@ else:
 #
 #Programming activity 2
 #
+from datetime import date
+age = int(input("Enter your age: "))
+current_year = date.today().year
+
+while age >0:
+    print ("You were alive in: ", current_year)
+    age -= 1
+    current_year -= 1
+else:
+    print("you were born in:", current_year)
