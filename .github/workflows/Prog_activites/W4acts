@@ -1,4 +1,6 @@
+#
 #Progamming activity 1
+#
 year = int(input("What year were you born?"))
 if year >=1997:
     print("You are a Zoomer")
@@ -23,3 +25,15 @@ while age >0:
     current_year -= 1
 else:
     print("you were born in:", current_year)
+#
+#Progamming activity 3
+#
+for fives in range(5,100,5):
+    print(fives)
+#
+#Progamming activity 4
+#
+num =5
+while num<= 95:
+    print(num)
+    num +=5
