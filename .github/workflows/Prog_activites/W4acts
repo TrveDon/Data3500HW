@@ -1,1 +1,15 @@
 #Progamming activity 1
+year = int(input("What year were you born?"))
+if year >=1997:
+    print("You are a Zoomer")
+elif year >=1981:
+    print("You are a Millenial")
+elif year >=1965:
+    print("You are Gen X")
+elif year >=1946:
+    print ("You are a Baby Boomer")
+else:
+    print ("You are older than a baby boomer")
+#
+#Programming activity 2
+#
