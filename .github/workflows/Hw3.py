@@ -30,3 +30,6 @@ if Pal == Pal[::-1]:
     print ("This is a Palindrome")
 else: 
     print('This is not a Palindrome')
+#
+#3.14
+#
