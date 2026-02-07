@@ -33,3 +33,20 @@ else:
 #
 #3.14
 #
+pi = 0
+sign = 1 
+z = 1
+#displays 3.14
+while abs(pi-3.14) > 0.0001:
+    pi += sign * (4/z)
+    sign *= -1
+    z += 2 
+print(pi)
+print("Terms Used", (z+1)//2)
+#Displays 3.141
+while abs(pi-3.141) > 0.00001:
+    pi += sign * (4/z)
+    sign *= -1
+    z += 2 
+print(pi)
+print("Terms Used", (z+1)//2)
