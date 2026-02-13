@@ -3,7 +3,7 @@ def welfunc(name):
     print("Welcome", name)
 welfunc('Don')
 # Activity 2
-def welcome(name)
+def welcome(name):
     welcome_mssg = "welcome" + name
     return welcome_mssg
 print(welcome('don'))
