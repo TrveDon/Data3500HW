@@ -1,0 +1,14 @@
+# Activity 1
+def welfunc(name):
+    print("Welcome", name)
+welfunc('Don')
+# Activity 2
+def welcome(name)
+    welcome_mssg = "welcome" + name
+    return welcome_mssg
+print(welcome('don'))
+# Activity 3
+def wel(name, age, fav_color):
+    wel_mssg = 'welcome' + name + 'you are:' + str(age) + 'years old and,' + fav_color + "is your favorite color"
+    return wel_mssg
+print(wel('Donovan', 20, 'Pthalo green'))
