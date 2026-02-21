@@ -1,0 +1,10 @@
+# Activity 1
+colors = ["Blue", "White", "Red"]
+
+for color in colors:
+    print("color:", color)
+# Activity 2
+for color in colors:
+    print("color:", color)
+    for letter in color:
+        print("letter:", letter)
