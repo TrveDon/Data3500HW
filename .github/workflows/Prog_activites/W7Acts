@@ -1,6 +1,5 @@
 # Activity 1
 colors = ["Blue", "White", "Red"]
-
 for color in colors:
     print("color:", color)
 # Activity 2
@@ -8,3 +7,32 @@ for color in colors:
     print("color:", color)
     for letter in color:
         print("letter:", letter)
+# Activity 3
+import random
+print()
+lst = []
+for i in range(10):
+    lst.append(random.randint(1, 100))
+print("lst:", lst)
+# Activity 4
+print()
+i = 0
+for num in lst:
+    if i > 0:
+        print(lst[i])
+        print(lst[i-1])
+        if lst[i] % 2 == 0 and lst[i-1] % 2 == 0: # check both indexes
+            print("both", lst[i], "and", lst[i-1], "are even")
+        print("--------")
+    i += 1
+# Activity 5
+file = open("/home/ubuntu/environment/AAPL.txt")
+lines = file.readlines()
+prices = []
+for line in lines:
+    prices.append(float(line))
+
+total_avg = sum(prices) / len(prices)
+print("total_avg:", total_avg)
+five_day_avg = (prices[0] + prices[1] + prices[2] + prices[3] + prices[4]) / 5
+print("five_day_avg:", five_day_avg)
