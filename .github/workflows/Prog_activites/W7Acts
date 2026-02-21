@@ -31,7 +31,6 @@ lines = file.readlines()
 prices = []
 for line in lines:
     prices.append(float(line))
-
 total_avg = sum(prices) / len(prices)
 print("total_avg:", total_avg)
 five_day_avg = (prices[0] + prices[1] + prices[2] + prices[3] + prices[4]) / 5
