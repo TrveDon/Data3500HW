@@ -26,7 +26,7 @@ for num in lst:
         print("--------")
     i += 1
 # Activity 5
-file = open("/home/ubuntu/environment/AAPL.txt")
+file = open("AAPL.2023.txt")
 lines = file.readlines()
 prices = []
 for line in lines:
@@ -35,3 +35,24 @@ total_avg = sum(prices) / len(prices)
 print("total_avg:", total_avg)
 five_day_avg = (prices[0] + prices[1] + prices[2] + prices[3] + prices[4]) / 5
 print("five_day_avg:", five_day_avg)
+# Activity 5.2
+last_f_avg = sum(prices[-4:])/4
+print("last_four_avg:", last_f_avg)
+print()
+i = 0
+buy = 0
+t_profit = 0
+for price in prices:
+    if i >= 4: 
+        avg = (prices[i] + prices[i - 1] + prices[i - 2] + prices[i - 3]) / 4
+        if price < avg and buy == 0: # buy conditions
+            buy = price
+            print("Buying at:", "\t", price)
+        elif price > avg and buy != 0: # sell conditions
+            trade_profit = price - buy
+            print("Selling at:", "\t", price)
+            print("Trade profit:", "\t", trade_profit)
+            t_profit += trade_profit
+            buy = 0
+    i += 1
+print("total_profit:", "\t", t_profit)
