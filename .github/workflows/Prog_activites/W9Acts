@@ -1,0 +1,8 @@
+name = input('Enter your name: ')
+color = input('Enter your favorite color: ')
+statement = name + "'s favorite color is " +color
+with open("FavColor.txt", 'w') as file:
+    file.write(statement)
+print("output is in FavColor.txt")
+
+import numpy as np
