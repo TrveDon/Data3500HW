@@ -6,3 +6,10 @@ with open("FavColor.txt", 'w') as file:
 print("output is in FavColor.txt")
 
 import numpy as np
+arr =np.zeros(100)
+print('Array with zeros:')
+print(arr)
+
+arr =np.random.random(100)
+print('Array with random Numbers:')
+print(arr)
