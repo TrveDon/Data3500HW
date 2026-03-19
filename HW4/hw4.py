@@ -1,3 +1,3 @@
-stk = open("TSLA.csv.xlsx")
-lines = stk.readlines()
+file = open("TSLA.csv.xlsx")
+lines = file.readlines()
 print(lines)
