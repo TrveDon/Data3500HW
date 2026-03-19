@@ -1,19 +1,21 @@
+#file reader and ordering
 file = open("TSLA.csv")
 stockdata = file.readlines()
 header = stockdata[0]
 body = stockdata[1:]
 body.reverse()
 stockdata = [header] + body
-
+#isolate close prices
 close_prices = [
     float(line.strip().split(',')[1].replace('$', ''))
     for line in stockdata[1:]
 ]
+#Trade logic variables
 firstbuy = None
 buy = None
 profits = []
 movwin = 5
-
+#trade logic
 for i in range (movwin, len(close_prices)):
     current = close_prices[i]
     prev_5 = close_prices[i -movwin:i]
@@ -38,6 +40,7 @@ for i in range (movwin, len(close_prices)):
             print('No stock to sell')
     else:
         print("holding current price")
+#sums and outputs
 total_profit = sum(profits)
 print('first buy price: ',firstbuy)
 print('Total profit: ',total_profit)
