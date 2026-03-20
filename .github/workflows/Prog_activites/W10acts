@@ -1,0 +1,32 @@
+even = [i for i in range(2,101,2)]
+print(even)
+
+stir = ["   Hi   ", "Blank    ",'     :D   ']
+print(stir)
+newstir = [string.strip() for string in stir]
+print(newstir)
+
+name = input('Enter name: ')
+name= name.upper()
+print("WELCOME ",name)
+
+sentence = "dude, I just biked down that mountain and at first I was like Whoa and then I was like Whoa"
+print(sentence)
+Sen = sentence.capitalize()
+words = sentence.split(" ")
+
+fwhoa = True
+x = 0
+for word in words:
+    if words[x] == 'Whoa' and fwhoa:
+        words[x] = words[x].lower()
+        fwhoa = False
+    elif words[x] == 'Whoa' and not fwhoa:
+        words[x] = words[x].upper()
+    else:
+        pass
+    x+=1
+newsent = "" 
+for word in words:
+    newsent += " " + word
+print(newsent)
