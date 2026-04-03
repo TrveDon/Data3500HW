@@ -90,8 +90,8 @@ def saveResults(results):
         json.dump(results, f, indent=4)
 
 # File Reader
-def load_prices(CISCO.csv):
-    with open(CISCO.csv) as file:
+def load_prices(filename):
+    with open(filename) as file:
         lines = file.readlines()
 
     header = lines[0]
@@ -100,19 +100,19 @@ def load_prices(CISCO.csv):
     data = [header] + body
 
     prices = [
-        float(line.strip().split(',')[1].replace('$', ''))
+        float(line.strip().split(',')[1].replace('$', '').replace('"', ''))
         for line in data[1:]
     ]
 
     return prices
 
 # Main Program
-tickers = ["AAPL"]  # you can expand to 10 tickers
+tickers = ["CISCO"]  # you can expand to 10 tickers
 
 results = {}
 
 for ticker in tickers:
-    prices = load_prices(f"{ticker}.csv")
+    prices = load_prices(f"HW5/{ticker}.csv")
 
     results[f"{ticker}_prices"] = prices
 
