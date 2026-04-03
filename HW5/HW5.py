@@ -90,8 +90,8 @@ def saveResults(results):
         json.dump(results, f, indent=4)
 
 # File Reader
-def load_prices(filename):
-    with open(filename) as file:
+def load_prices(CISCO.csv):
+    with open(CISCO.csv) as file:
         lines = file.readlines()
 
     header = lines[0]
