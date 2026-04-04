@@ -31,3 +31,10 @@ person["age"] += 1
 print(person["age"])
 with open("person-2.json", "w") as file:
 	json.dump(person, file, indent=4)
+
+num3 = int(input("Enter a number: "))
+num4 = int(input("Enter another number: "))
+try:
+    num3/num4
+except:
+    print("Cannot divide by zero")
