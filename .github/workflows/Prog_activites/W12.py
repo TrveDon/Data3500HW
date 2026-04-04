@@ -23,15 +23,11 @@ dict["Mult Table"] = diglist
 for key in dict.keys():
     print(key, dict[key])
 
-# Activity 3
-# use with open to update person.json
-with open("person.json") as file:
+import json
+with open("person-2.json") as file:
     person = json.load(file)
-
-# update information about person
 print(person["age"])
 person["age"] += 1
 print(person["age"])
-
-with open("person.json", "w") as file:
+with open("person-2.json", "w") as file:
 	json.dump(person, file, indent=4)
