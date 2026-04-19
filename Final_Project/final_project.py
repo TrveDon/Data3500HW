@@ -17,7 +17,7 @@ key3 = 'usd'
 
 basedt = datetime(2025, 4, 18)
 
-coins = ['bitcoin','ethereum','binancecoin','tron','dogecoin','memecore']
+coins = ['bitcoin','ethereum','binancecoin','tron','dogecoin','tether']
 
 for coin in coins:
     filename = f'{coin}_prices.csv'
