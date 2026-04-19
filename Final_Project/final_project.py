@@ -42,6 +42,8 @@ for coin in coins:
         for i in range(364):
             dt = basedt + timedelta(days=i+1)
             dts = dt.strftime('%d-%m-%Y')
+            if dts in existing:
+                continue
             url = url1 + coin + url2 + dts + url3
             req = requests.get(url)
             d = json.loads(req.text)
@@ -50,5 +52,7 @@ for coin in coins:
                 price = d[key1][key2][key3]
                 print(dts, d[key1][key2][key3])
                 writer.writerow([dts, price])
-            except:
-                print(dts, "error")
+                f.flush()
+                existing.add(dts)
+            except Exception as e:
+                print(dts, "error: ", e)
