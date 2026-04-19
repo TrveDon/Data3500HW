@@ -1,4 +1,14 @@
 {
-    "tether_sma_score": 797.4993897627371,
+    "bitcoin_sma_score": 150.61755784624359,
+    "bitcoin_mr_score": 1270.2008056756245,
+    "ethereum_sma_score": -870.4788913505554,
+    "ethereum_mr_score": 1151.4006665816537,
+    "binancecoin_sma_score": 324.7620528771032,
+    "binancecoin_mr_score": 517.3257120509263,
+    "tron_sma_score": 400.05508199430824,
+    "tron_mr_score": 1602.7094633021015,
+    "dogecoin_sma_score": -809.581944798514,
+    "dogecoin_mr_score": 24.848574330728297,
+    "tether_sma_score": 782.059324115307,
     "tether_mr_score": 0.0
 }
