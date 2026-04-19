@@ -28,7 +28,7 @@ for coin in coins:
         with open(filename, 'r') as f:
             reader = csv.DictReader(f)
             for row in reader:
-                existing.add(row['date'])
+                existing.add(row['Date'])
    
     #open file in append
     file_exists = os.path.exists(filename)
@@ -39,17 +39,16 @@ for coin in coins:
             writer.writerow(['Date', 'Price_USD'])
     
     #loop through dates to load file
-    for i in range(364):
-        dt = basedt + timedelta(days=i+1)
-        dts = dt.strftime('%d-%m-%Y')
-        if dts in existing:
-            continue
-        url = url1 + coin + url2 + dts + url3
-        req = requests.get(url)
-        d = json.loads(req.text)
-        time.sleep(12)
-        try:
-            print(dts, d[key1][key2][key3])
-            writer.writerow(dts, d[key1][key2][key3])
-        except:
-            print(d)
+        for i in range(364):
+            dt = basedt + timedelta(days=i+1)
+            dts = dt.strftime('%d-%m-%Y')
+            url = url1 + coin + url2 + dts + url3
+            req = requests.get(url)
+            d = json.loads(req.text)
+            time.sleep(12)
+            try:
+                price = d[key1][key2][key3]
+                print(dts, d[key1][key2][key3])
+                writer.writerow([dts, price])
+            except:
+                print(dts, "error")
