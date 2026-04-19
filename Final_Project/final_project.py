@@ -15,13 +15,15 @@ key1 = 'market_data'
 key2 = 'current_price'
 key3 = 'usd'
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 basedt = datetime(2025, 4, 18)
 
 coins = ['bitcoin','ethereum','binancecoin','tron','dogecoin','tether']
 
 def build_data():   
     for coin in coins: 
-        filename = f'{coin}_prices.csv'
+        filename = os.path.join(BASE_DIR, f'{coin}_prices.csv')
     
     #load existing data if present
         existing = set()
@@ -147,7 +149,8 @@ def compute_metrics(profits, firstbuy):
 
 #------Save results-----
 def saveResults(results):
-    with open("finalres.json","w") as f:
+    filepath = os.path.join(BASE_DIR, "finalres.json")
+    with open(filepath, "w") as f:
         json.dump(results, f, indent=4)
 
 #------Main Systems-----
@@ -159,7 +162,7 @@ def main():
     scores = {}
 
     for coin in coins:
-        filename = f"{coin}_prices.csv"
+        filename = os.path.join(BASE_DIR, f"{coin}_prices.csv")
 
         if not os.path.exists(filename):
             continue
